@@ -24,15 +24,15 @@ class LoggingMiddleware {
 
       if (response.ok) {
         const result = await response.json();
-        console.log(`✅ Log sent: [${level.toUpperCase()}] ${message}`);
+        console.log(`Log sent: [${level.toUpperCase()}] ${message}`);
         return result;
       } else {
         const errorText = await response.text();
-        console.error(`❌ Failed to send log (${response.status}):`, errorText);
+        console.error(`Failed to send log (${response.status}):`, errorText);
         return { error: `HTTP ${response.status}: ${errorText}` };
       }
     } catch (error) {
-      console.error('❌ Logging error:', error.message);
+      console.error('Logging error:', error.message);
       return { error: error.message };
     }
   }
