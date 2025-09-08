@@ -1,0 +1,32 @@
+.App {
+  text-align: left;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+/* Custom styles for better UX */
+.MuiTextField-root {
+  margin-bottom: 16px !important;
+}
+
+.success-container {
+  background-color: #e8f5e8 !important;
+  border: 1px solid #4caf50 !important;
+}
+
+.copy-button {
+  text-transform: none !important;  
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .App {
+    padding: 8px;
+  }
+}
